@@ -700,6 +700,7 @@ transform: translate(-50%, -50%); */
   transform: translate(-50%, -50%) scale(0.1) rotate(-180deg);
 }
 .icon-close {
+  transition: color var(--transition);
   position: absolute;
   top: 8px;
   right: 8px;
@@ -718,6 +719,13 @@ transform: translate(-50%, -50%); */
 
   cursor: pointer;
 }
+.close-modal {
+  fill: currentColor;
+}
+.icon-close:hover,
+.icon-close:focus {
+  color: var(--accent);
+}
 /* Form */
 .form {
   width: 448px;
@@ -733,6 +741,8 @@ transform: translate(-50%, -50%); */
   text-align: center;
 }
 .form-field {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 }
@@ -747,21 +757,23 @@ transform: translate(-50%, -50%); */
   letter-spacing: 0.01em;
 }
 .form-field input {
-  padding-top: 11px;
-  padding-right: 12px;
-  padding-bottom: 11px;
-  padding-left: 12px;
+  transition: border-color var(--transition);
 
+  height: 40px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+  padding-right: 12px;
+  padding-left: 42px;
 }
 .comment {
+  transition: border-color var(--transition);
+
   padding-top: 12px;
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
 
-  width: 100%;
+  width: 448px;
   height: 120px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -771,6 +783,10 @@ transform: translate(-50%, -50%); */
 
   line-height: 1.14;
   letter-spacing: 0.01em;
+}
+.form-field:focus-within .comment {
+  outline: none;
+  border-color: var(--accent);
 }
 .form-checkbox {
   display: flex;
@@ -813,4 +829,19 @@ transform: translate(-50%, -50%); */
 .button-submit:focus {
   background-color: var(--hover-btn);
   color: var(--bg-color);
+}
+.icon-input {
+  position: absolute;
+  bottom: 10px;
+  left: 11px;
+
+  fill: var(--secondary-text-color);
+  transition: fill var(--transition);
+}
+.form-field:focus-within .icon-input {
+  fill: var(--accent);
+}
+.form-field:focus-within .form-input {
+  outline: none;
+  border-color: var(--accent);
 }
