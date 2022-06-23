@@ -858,17 +858,42 @@ transform: translate(-50%, -50%); */
   outline: none;
   border-color: var(--accent);
 }
-.form-checkbox {
+.checkbox-label {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  justify-content: center;
-}
-.form-checkbox label {
-  margin-left: 8px;
   line-height: 1.71;
 }
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--accent);
+  background-image: url(../images/form-icon-check.svg);
+  border-color: var(--accent);
+  background-size: contain;
+  background-origin: border-box;
+}
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+}
 .terms {
+  margin-left: 5px;
   color: var(--accent);
 }
 .button-submit {
