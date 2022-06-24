@@ -561,22 +561,28 @@ transform: translate(-50%, -50%); */
   text-transform: uppercase;
 }
 .footer-input {
+  transition: border-color var(--transition);
+
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
 
   width: 358px;
+  height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--bg-color);
   background-color: transparent;
   border-radius: 4px;
+}
+.footer-input:hover,
+.footer-input:focus {
+  border-color: var(--accent);
 }
 .footer-input:placeholder-shown {
   font-size: 16px;
   letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
 }
 .footer-button {
   transition: background-color var(--transition), box-shadow var(--transition);
@@ -754,11 +760,11 @@ transform: translate(-50%, -50%); */
 
   padding-top: 40px;
   padding-right: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   padding-left: 40px;
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
 
   background-color: var(--bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -826,7 +832,7 @@ transform: translate(-50%, -50%); */
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-.form-field input {
+.form-input {
   transition: border-color var(--transition);
 
   height: 40px;
@@ -834,6 +840,12 @@ transform: translate(-50%, -50%); */
   border-radius: 4px;
   padding-right: 12px;
   padding-left: 42px;
+}
+.form-input:hover + svg {
+  fill: var(--accent);
+}
+.form-input:hover {
+  border: 1px solid var(--accent);
 }
 .comment {
   transition: border-color var(--transition);
@@ -847,6 +859,9 @@ transform: translate(-50%, -50%); */
   height: 120px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+}
+.comment:hover {
+  border: 1px solid var(--accent);
 }
 .form-field textarea::placeholder {
   color: var(--textarea-color);

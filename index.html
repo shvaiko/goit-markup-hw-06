@@ -389,6 +389,7 @@
               id="footer_mail"
               placeholder="E-mail"
               class="footer-input"
+              required
             />
           </label>
           <button type="submit" class="footer-button">
@@ -411,21 +412,21 @@
           <p class="text-form">Оставьте свои данные, мы вам перезвоним</p>
           <div class="form-field">
             <label for="name" class="form-label">Имя</label>
-            <input type="text" name="name" id="name" class="form-input" />
+            <input type="text" name="name" id="name" class="form-input" required />
             <svg width="18" height="18" class="icon-input">
               <use href="./images/icons.svg#icon-person-form"></use>
             </svg>
           </div>
           <div class="form-field">
             <label for="tel" class="form-label">Телефон</label>
-            <input type="tel" name="tel" id="tel" class="form-input" />
+            <input type="tel" name="tel" id="tel" class="form-input" required />
             <svg width="18" height="18" class="icon-input">
               <use href="./images/icons.svg#icon-phone-form"></use>
             </svg>
           </div>
           <div class="form-field">
             <label for="mail" class="form-label">Почта</label>
-            <input type="email" name="mail" id="mail" class="form-input" />
+            <input type="email" name="mail" id="mail" class="form-input" required />
             <svg width="18" height="18" class="icon-input">
               <use href="./images/icons.svg#icon-email-form"></use>
             </svg>
@@ -441,7 +442,7 @@
             ></textarea>
           </div>
           <label class="checkbox-label">
-            <input class="checkbox-input" type="checkbox" name="policy" />
+            <input class="checkbox-input" type="checkbox" name="policy" required />
             <span class="checkbox-icon"></span>
             Соглашаюсь с рассылкой и принимаю
             <a href="" class="terms"> Условия договора</a>
